@@ -21,8 +21,6 @@ class MenuActivity : AppCompatActivity() {
         btnMessageApp.setOnClickListener{ navigateToMessageApp() }
         btnIMCApp.setOnClickListener{ navigateToIMCApp() }
 
-
-        print ("Esto es un ejemplo")
     }
     //Fuera de la función onCreate()
     private fun navigateToHelloApp(){
