@@ -36,4 +36,14 @@
         android:textStyle="bold"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnBoardgameApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BoardgameApp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"/>
 </LinearLayout>
