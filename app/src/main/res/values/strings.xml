@@ -21,4 +21,5 @@
     <string name="boardgames">Juegos de mesa</string>
     <string name="categories">Categorías</string>
     <string name="games">Juegos</string>
+    <string name="dialog_game_name">Nombre del juego</string>
 </resources>

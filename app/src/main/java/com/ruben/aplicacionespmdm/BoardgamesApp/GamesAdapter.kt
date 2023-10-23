@@ -13,9 +13,9 @@ class GamesAdapter(var games: List<Game>) :
         return GamesViewholder(view)
     }
 
-    override fun getItemCount() = games.size
-
     override fun onBindViewHolder(holder: GamesViewholder, position: Int) {
         holder.render(games[position])
     }
+
+    override fun getItemCount() = games.size
 }

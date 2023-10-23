@@ -1,9 +1,11 @@
 package com.ruben.aplicacionespmdm.BoardgamesApp
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.ruben.aplicacionespmdm.BoardgamesApp.GameCategory.*
 import com.ruben.aplicacionespmdm.Game
 import com.ruben.aplicacionespmdm.R
@@ -19,7 +21,7 @@ class BoardgameActivity : AppCompatActivity() {
     )
 
     private val games = mutableListOf(
-        Game("Frostpunk", Cooperative),
+        Game("Frostpunk", GameCategory.Cooperative),
         Game("Hero Realm", Deckbuilding),
         Game("Agricola", Euro),
         Game("Arkham Horror", LCG),
@@ -28,6 +30,7 @@ class BoardgameActivity : AppCompatActivity() {
 
     private lateinit var rvCategories: RecyclerView
     private lateinit var rvGames: RecyclerView
+    private lateinit var fabAddGame : FloatingActionButton
 
     private lateinit var categoriesAdapter: CategoriesAdapter
     private lateinit var gamesAdapter: GamesAdapter
@@ -38,7 +41,9 @@ class BoardgameActivity : AppCompatActivity() {
 
         initComponents()
         initUI()
+        initListeners()
     }
+
 
     private fun initUI() {
         categoriesAdapter = CategoriesAdapter(categories)
@@ -54,5 +59,15 @@ class BoardgameActivity : AppCompatActivity() {
     private fun initComponents() {
         rvCategories = findViewById<RecyclerView>(R.id.rvCategories)
         rvGames = findViewById<RecyclerView>(R.id.rvGames)
+        fabAddGame = findViewById(R.id.fabAddGame)
+    }
+
+    private fun initListeners() {
+        fabAddGame.setOnClickListener{ showDialog() }
+    }
+
+    private fun showDialog() {
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.dialog_game)
     }
 }
