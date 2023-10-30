@@ -22,8 +22,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <RadioButton
+            android:id="@+id/rbCooperative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_cooperative_category"
+            android:checked="true"
+            android:text="@string/dialog_cooperative_category"
+            android:textColor="@color/white" />
 
+        <RadioButton
+            android:id="@+id/rbDeckbuilding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_deckbuilding_category"
+            android:text="@string/dialog_deckbuilding_category"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbEuro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_euro_category"
+            android:text="@string/dialog_euro_category"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbLCG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_lcg_category"
+            android:text="@string/dialog_lcg_category"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbLegacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_legacy_category"
+            android:text="@string/dialog_legacy_category"
+            android:textColor="@color/white" />
 
     </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAddGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_newgame_button"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/bgapp_accent"/>
 
 </LinearLayout>

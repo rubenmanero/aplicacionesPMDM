@@ -22,4 +22,10 @@
     <string name="categories">Categorías</string>
     <string name="games">Juegos</string>
     <string name="dialog_game_name">Nombre del juego</string>
+    <string name="dialog_cooperative_category">Cooperativos</string>
+    <string name="dialog_deckbuilding_category">Deckbuilding</string>
+    <string name="dialog_euro_category">Eurogames</string>
+    <string name="dialog_lcg_category">Living Card Games</string>
+    <string name="dialog_legacy_category">Legacy</string>
+    <string name="dialog_newgame_button">Nuevo juego</string>
 </resources>

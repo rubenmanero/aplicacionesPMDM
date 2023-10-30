@@ -4,14 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    tools:context=".BoardgamesApp.BoardgameActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/bgapp_background_app"
-        android:orientation="vertical"
-        tools:context=".BoardgamesApp.BoardgameActivity">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"

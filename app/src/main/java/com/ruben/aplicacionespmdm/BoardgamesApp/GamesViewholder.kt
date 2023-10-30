@@ -5,6 +5,7 @@ import android.graphics.Paint
 import android.view.View
 import android.widget.CheckBox
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.ruben.aplicacionespmdm.Game
@@ -14,8 +15,17 @@ class GamesViewholder (view: View) : RecyclerView.ViewHolder(view) {
 
     private val tvGame: TextView = view.findViewById(R.id.tvGame)
     private val cbGame: CheckBox = view.findViewById(R.id.cbGame)
+    private val cvGame: CardView = view.findViewById(R.id.cvGame)
 
     fun render(game: Game) {
+
+        if (game.isSelected) {
+            tvGame.paintFlags = tvGame.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+        } else {
+            tvGame.paintFlags = tvGame.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+        }
+
+        cbGame.isChecked = game.isSelected
 
         tvGame.text = game.name
 

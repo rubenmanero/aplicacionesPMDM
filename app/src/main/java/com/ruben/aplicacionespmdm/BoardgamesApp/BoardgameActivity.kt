@@ -3,6 +3,10 @@ package com.ruben.aplicacionespmdm.BoardgamesApp
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -44,10 +48,9 @@ class BoardgameActivity : AppCompatActivity() {
         initListeners()
     }
 
-
     private fun initUI() {
-        categoriesAdapter = CategoriesAdapter(categories)
-        gamesAdapter = GamesAdapter(games)
+        categoriesAdapter = CategoriesAdapter(categories) {position -> onCategorieSelected(position)}
+        gamesAdapter = GamesAdapter(games) {position -> onGameSelected(position)}
 
         rvCategories.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         rvGames.layoutManager = LinearLayoutManager(this)
@@ -69,5 +72,48 @@ class BoardgameActivity : AppCompatActivity() {
     private fun showDialog() {
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.dialog_game)
+
+        val btnAddGame: Button = dialog.findViewById(R.id.btnAddGame)
+        val etGame: EditText = dialog.findViewById(R.id.etGame)
+        val rgCategories: RadioGroup = dialog.findViewById(R.id.rgCategories)
+
+        btnAddGame.setOnClickListener {
+            val currentGame = etGame.text.toString()
+            if(currentGame.isNotEmpty()){
+                val selectedId = rgCategories.checkedRadioButtonId
+                val selectedRadioButton: RadioButton = rgCategories.findViewById(selectedId)
+                val currentCategory: GameCategory = when(selectedRadioButton.text){
+                    getString(R.string.dialog_cooperative_category) -> Cooperative
+                    getString(R.string.dialog_deckbuilding_category) -> Deckbuilding
+                    getString(R.string.dialog_euro_category) -> Euro
+                    getString(R.string.dialog_lcg_category) -> LCG
+                    else -> Legacy
+                }
+                games.add(Game(currentGame, currentCategory))
+                updateGames()
+                dialog.hide()
+
+            }
+        }
+        dialog.show()
     }
+
+    private fun updateGames() {
+        val selectedCategories: List<GameCategory> = categories.filter { it.isSelected }
+        val newGames: List<Game> = games.filter { selectedCategories.contains(it.category) }
+
+        gamesAdapter.games = newGames
+        gamesAdapter.notifyDataSetChanged()
+    }
+
+    private fun onGameSelected(position:Int){
+        games[position].isSelected = !games[position].isSelected
+        updateGames()
+    }
+    private fun onCategorieSelected(position:Int){
+        categories[position].isSelected = !categories[position].isSelected
+        categoriesAdapter.notifyItemChanged(position)
+        updateGames()
+    }
+
 }
