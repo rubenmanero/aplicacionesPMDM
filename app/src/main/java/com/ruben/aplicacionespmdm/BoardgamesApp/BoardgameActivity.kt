@@ -3,6 +3,7 @@ package com.ruben.aplicacionespmdm.BoardgamesApp
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
@@ -102,8 +103,18 @@ class BoardgameActivity : AppCompatActivity() {
         val selectedCategories: List<GameCategory> = categories.filter { it.isSelected }
         val newGames: List<Game> = games.filter { selectedCategories.contains(it.category) }
 
+        for(i in newGames.indices){
+            Log.i("Juego", newGames[i].toString())
+        }
+        Log.i("Separador", "Separador")
+
         gamesAdapter.games = newGames
         gamesAdapter.notifyDataSetChanged()
+
+        for(i in gamesAdapter.games.indices){
+            Log.i("Juego", newGames[i].toString())
+        }
+        Log.i("Fin", "Fin")
     }
 
     private fun onGameSelected(position:Int){
