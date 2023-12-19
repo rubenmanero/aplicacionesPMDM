@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cvVerticalBar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="96dp"
+    android:layout_height="384dp"
+    android:layout_marginHorizontal="16dp"
+    app:cardBackgroundColor="#9900ACC1">
+
+    <TextView
+        android:id="@+id/tvVerticalBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_margin="4dp"
+        tools:text="V1" />
+
+</androidx.cardview.widget.CardView>

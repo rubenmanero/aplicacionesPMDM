@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.ruben.aplicacionespmdm.BoardgamesApp.GameCategory.*
-import com.ruben.aplicacionespmdm.Game
 import com.ruben.aplicacionespmdm.R
 
 class BoardgameActivity : AppCompatActivity() {
@@ -25,8 +24,8 @@ class BoardgameActivity : AppCompatActivity() {
         Legacy
     )
 
-    private val games = mutableListOf(
-        Game("Frostpunk", GameCategory.Cooperative),
+    private var games = mutableListOf(
+        Game("Frostpunk", Cooperative),
         Game("Hero Realm", Deckbuilding),
         Game("Agricola", Euro),
         Game("Arkham Horror", LCG),
@@ -103,6 +102,9 @@ class BoardgameActivity : AppCompatActivity() {
         val selectedCategories: List<GameCategory> = categories.filter { it.isSelected }
         val newGames: List<Game> = games.filter { selectedCategories.contains(it.category) }
 
+        val gamesErased: Int = games.size - newGames.size
+        Log.i("Juegos borrados", gamesErased.toString())
+
         for(i in newGames.indices){
             Log.i("Juego", newGames[i].toString())
         }
@@ -112,7 +114,7 @@ class BoardgameActivity : AppCompatActivity() {
         gamesAdapter.notifyDataSetChanged()
 
         for(i in gamesAdapter.games.indices){
-            Log.i("Juego", newGames[i].toString())
+            Log.i("Juego", i.toString())
         }
         Log.i("Fin", "Fin")
     }

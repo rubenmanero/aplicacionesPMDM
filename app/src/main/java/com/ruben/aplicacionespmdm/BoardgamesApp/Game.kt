@@ -1,4 +1,4 @@
-package com.ruben.aplicacionespmdm
+package com.ruben.aplicacionespmdm.BoardgamesApp
 
 import com.ruben.aplicacionespmdm.BoardgamesApp.GameCategory
 
