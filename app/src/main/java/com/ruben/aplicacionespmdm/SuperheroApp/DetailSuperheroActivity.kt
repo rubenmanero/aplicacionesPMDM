@@ -43,7 +43,7 @@ class DetailSuperheroActivity : AppCompatActivity() {
         binding.tvSuperheroRealName.text = superhero.biography.fullName
         binding.tvPublisher.text = superhero.biography.publisher
         binding.tvDescription.text = "${superhero.name} es de la raza de los ${superhero.appearance.race}," +
-                "nació en ..., mide ${superhero.appearance.height[1]} y pesa ${superhero.appearance.weight[1]}."
+                "nació en ${superhero.biography.birthplace}, mide ${superhero.appearance.height[1]} y pesa ${superhero.appearance.weight[1]}."
         var alias: String =""
         for(nombre in superhero.biography.aliases) {
             alias += "$nombre, "
