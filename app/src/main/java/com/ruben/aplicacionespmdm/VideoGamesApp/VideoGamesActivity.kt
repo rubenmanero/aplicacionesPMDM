@@ -2,6 +2,8 @@ package com.ruben.aplicacionespmdm.VideoGamesApp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.SearchView
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ruben.aplicacionespmdm.R
 import com.ruben.aplicacionespmdm.SuperheroApp.SuperheroAdapter
 import com.ruben.aplicacionespmdm.databinding.ActivityVideoGamesBinding
@@ -20,13 +22,29 @@ class VideoGamesActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         retrofit = getRetrofit()
+        initUI()
     }
 
+    private fun initUI() {
+        binding.searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener
+        {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                //searchByName(query.orEmpty())
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?) = false
+        })
+        //adapter = VideoGameAdapter()
+        binding.rvSuperhero.setHasFixedSize(true)
+        binding.rvSuperhero.layoutManager = LinearLayoutManager(this)
+        //binding.rvSuperhero.adapter = adapter
+    }
 
     private fun getRetrofit(): Retrofit {
         return Retrofit
             .Builder()
-            .baseUrl("https://superheroapi.com/")
+            .baseUrl("https://api.rawg.io/api/platforms?key=2a87fee229814f178343d360c47b4ccb")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

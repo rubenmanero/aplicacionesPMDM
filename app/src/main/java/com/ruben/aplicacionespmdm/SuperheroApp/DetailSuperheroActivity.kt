@@ -34,7 +34,6 @@ class DetailSuperheroActivity : AppCompatActivity() {
             if(superheroDetail.body() != null){
                 runOnUiThread { createUI(superheroDetail.body()!!) }
             }
-
         }
     }
 
@@ -43,6 +42,14 @@ class DetailSuperheroActivity : AppCompatActivity() {
         binding.tvSuperheroName.text = superhero.name
         binding.tvSuperheroRealName.text = superhero.biography.fullName
         binding.tvPublisher.text = superhero.biography.publisher
+        binding.tvDescription.text = "${superhero.name} es de la raza de los ${superhero.appearance.race}," +
+                "nació en ..., mide ${superhero.appearance.height[1]} y pesa ${superhero.appearance.weight[1]}."
+        var alias: String =""
+        for(nombre in superhero.biography.aliases) {
+            alias += "$nombre, "
+        }
+        binding.tvAlias.text = "Se le conoce también como $alias"
+        binding.tvStarting.text = "Su primera aparición fue en ${superhero.biography.starting}"
         prepareStats(superhero.powerstats)
     }
 
