@@ -36,6 +36,7 @@ android {
     buildFeatures{
         viewBinding = true   //Además, hay que darle a sincronizar
     }
+    buildToolsVersion = "33.0.1"
 }
 
 dependencies {
@@ -51,6 +52,9 @@ dependencies {
 
     //Picasso
     implementation ("com.squareup.picasso:picasso:2.8")
+
+    //DataStore
+    implementation ("androidx.datastore:datastore-preferences:1.0.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

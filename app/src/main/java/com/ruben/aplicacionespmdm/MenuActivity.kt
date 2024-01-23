@@ -10,6 +10,7 @@ import com.ruben.aplicacionespmdm.HelloApp.MainActivity
 import com.ruben.aplicacionespmdm.IMCApp.IMCcalculator
 import com.ruben.aplicacionespmdm.MessageApp.MessageSending
 import com.ruben.aplicacionespmdm.R.id.btnIMCApp
+import com.ruben.aplicacionespmdm.Settings.SettingsActivity
 import com.ruben.aplicacionespmdm.SuperheroApp.SuperheroListActivity
 
 class MenuActivity : AppCompatActivity() {
@@ -23,12 +24,15 @@ class MenuActivity : AppCompatActivity() {
         var btnBoardgameApp = findViewById<Button>(R.id.btnBoardgameApp)
         var btnColorsApp = findViewById<Button>(R.id.btnColorsApp)
         var btnSuperheroApp = findViewById<Button>(R.id.btnSuperheroApp)
+        var btnSettings = findViewById<Button>(R.id.btnSettings)
 
         btnHelloApp.setOnClickListener{ navigateToHelloApp() }
         btnMessageApp.setOnClickListener{ navigateToMessageApp() }
         btnIMCApp.setOnClickListener{ navigateToIMCApp() }
         btnBoardgameApp.setOnClickListener{ navigateToBoardgameApp() }
+        btnColorsApp.setOnClickListener{ navigateToColorsApp() }
         btnSuperheroApp.setOnClickListener{ navigateToSuperheroApp() }
+        btnSettings.setOnClickListener{ navigateToSettings() }
 
     }
     //Fuera de la función onCreate()
@@ -57,6 +61,10 @@ class MenuActivity : AppCompatActivity() {
     }
     private fun navigateToSuperheroApp(){
         var intent = Intent(this, SuperheroListActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToSettings(){
+        var intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
     }
 }
