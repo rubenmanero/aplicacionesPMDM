@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@color/bgapp_background_app"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etGame"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="@string/dialog_add_game"
+        android:inputType="text"
+        android:importantForAutofill="no"/>
+    
+    <RadioGroup
+        android:id="@+id/rgCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbCooperative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_cooperative_category"
+            android:checked="true"
+            android:text="@string/dialog_cooperative_category"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/rbDeckbuilding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_deckbuilding_category"
+            android:text="@string/dialog_deckbuilding_category"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/rbEurogames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_euro_category"
+            android:text="@string/dialog_euro_category"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/rbLCG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_lcg_category"
+            android:text="@string/dialog_lcg_category"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/rbLegacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_legacy_category"
+            android:text="@string/dialog_legacy_category"
+            android:textColor="@color/white"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAddGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_new_game"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/bgapp_accent"/>
+
+</LinearLayout>

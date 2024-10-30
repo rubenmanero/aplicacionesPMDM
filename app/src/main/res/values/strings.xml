@@ -18,7 +18,15 @@
     <string name="description_sobrepeso">Estás por encima de lo óptimo para tu peso y altura.</string>
     <string name="title_obesidad">Obesidad</string>
     <string name="description_obesidad">Estás MUY por encima de lo óptimo para tu peso y altura.</string>
+
     <string name="boardgames">Juegos de mesa</string>
     <string name="categories">Categorías</string>
     <string name="games">Juegos</string>
+    <string name="dialog_add_game">Añade un juego</string>
+    <string name="dialog_cooperative_category">Cooperativos</string>
+    <string name="dialog_deckbuilding_category">Deckbuilding</string>
+    <string name="dialog_euro_category">Eurogames</string>
+    <string name="dialog_lcg_category">Living Card Games</string>
+    <string name="dialog_legacy_category">Legacy</string>
+    <string name="dialog_new_game">Nuevo juego</string>
 </resources>
