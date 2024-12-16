@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ruben.aplicacionespmdm.BoardgamesApp.BoardgamesActivity
 import com.ruben.aplicacionespmdm.IMCapp.IMCactivity
 import com.ruben.aplicacionespmdm.MessageApp.MainActivity
+import com.ruben.aplicacionespmdm.SuperheroApp.SuperheroListActivity
 
 class MenuActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -18,10 +19,12 @@ class MenuActivity : AppCompatActivity() {
         var btnMessageApp = findViewById<Button>(R.id.btnMessageApp)
         var btnIMCApp = findViewById<Button>(R.id.btnIMCapp)
         var btnBoardgamesApp = findViewById<Button>(R.id.btnBoardgamesApp)
+        var btnSuperheroApp = findViewById<Button>(R.id.btnSuperheroApp)
 
         btnMessageApp.setOnClickListener { navigateToMessageApp() }
         btnIMCApp.setOnClickListener { navigateToIMCapp() }
         btnBoardgamesApp.setOnClickListener { navigateToBoardgamesApp() }
+        btnSuperheroApp.setOnClickListener { navigateToSuperheroApp() }
 
     }
 
@@ -37,6 +40,11 @@ class MenuActivity : AppCompatActivity() {
 
     private fun navigateToBoardgamesApp() {
         var intent = Intent(this, BoardgamesActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToSuperheroApp() {
+        var intent = Intent(this, SuperheroListActivity::class.java)
         startActivity(intent)
     }
 }

@@ -32,4 +32,10 @@
     <color name="bgapp_lcg_category">#4CAF50</color>
     <color name="bgapp_cooperative_category">#D016F1</color>
     <color name="bgapp_legacy_category">#EDF351</color>
+
+    <color name="red20">#33FF0000</color>
+    <color name="red35">#59FF0000</color>
+    <color name="red50">#80FF0000</color>
+    <color name="red65">#A6FF0000</color>
+    <color name="red80">#CCFF0000</color>
 </resources>

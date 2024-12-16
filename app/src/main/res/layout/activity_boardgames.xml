@@ -14,7 +14,7 @@
         android:layout_margin="32dp"
         android:src="@android:drawable/ic_input_add"
         android:contentDescription="Añade un juego"
-        app:backgroundTint="@color/bgapp_accent"
+        app:backgroundTint="#FF0000"
         app:tint="@color/white"/>
 
     <LinearLayout
