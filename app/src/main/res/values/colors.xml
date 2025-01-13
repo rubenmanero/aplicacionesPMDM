@@ -38,4 +38,64 @@
     <color name="red50">#80FF0000</color>
     <color name="red65">#A6FF0000</color>
     <color name="red80">#CCFF0000</color>
+
+    <!--ColorsApp-->
+    <color name="dialog_text">#DDDDDD</color>
+
+    <color name="white20">#33FFFFFF</color>
+    <color name="white35">#59FFFFFF</color>
+    <color name="white50">#80FFFFFF</color>
+    <color name="white65">#A6FFFFFF</color>
+    <color name="white80">#CCFFFFFF</color>
+
+    <color name="orange20">#33FF9100</color>
+    <color name="orange35">#59FF9100</color>
+    <color name="orange50">#80FF9100</color>
+    <color name="orange65">#A6FF9100</color>
+    <color name="orange80">#CCFF9100</color>
+
+    <color name="yellow20">#33F7FF00</color>
+    <color name="yellow35">#59F7FF00</color>
+    <color name="yellow50">#80F7FF00</color>
+    <color name="yellow65">#A6F7FF00</color>
+    <color name="yellow80">#CCF7FF00</color>
+
+    <color name="green20">#3376FF03</color>
+    <color name="green35">#5976FF03</color>
+    <color name="green50">#8076FF03</color>
+    <color name="green65">#A676FF03</color>
+    <color name="green80">#CC76FF03</color>
+
+    <color name="cyan20">#3300FFE1</color>
+    <color name="cyan35">#5900FFE1</color>
+    <color name="cyan50">#8000FFE1</color>
+    <color name="cyan65">#A600FFE1</color>
+    <color name="cyan80">#CC00FFE1</color>
+
+    <color name="blue20">#330023FF</color>
+    <color name="blue35">#590023FF</color>
+    <color name="blue50">#800023FF</color>
+    <color name="blue65">#A60023FF</color>
+    <color name="blue80">#CC0023FF</color>
+
+    <color name="violet20">#33D100FF</color>
+    <color name="violet35">#59D100FF</color>
+    <color name="violet50">#80D100FF</color>
+    <color name="violet65">#A6D100FF</color>
+    <color name="violet80">#CCD100FF</color>
+
+    <color name="black20">#33000000</color>
+    <color name="black35">#59000000</color>
+    <color name="black50">#80000000</color>
+    <color name="black65">#A6000000</color>
+    <color name="black80">#CC000000</color>
+
+    <!--SuperheroApp-->
+    <color name="superhero_stat_intelligence">#00ff00</color>
+    <color name="superhero_stat_strength">#FF0000</color>
+    <color name="superhero_stat_speed">#E88B00</color>
+    <color name="superhero_stat_durability">#03A9F4</color>
+    <color name="superhero_stat_power">#FFEB3B</color>
+    <color name="superhero_stat_combat">#673AB7</color>
+
 </resources>
