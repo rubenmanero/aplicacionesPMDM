@@ -15,6 +15,15 @@
         android:theme="@style/Theme.AplicacionesPMDM"
         tools:targetApi="31">
         <activity
+            android:name=".Settings.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Settings.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VideoGamesApp.VideoGamesActivity"
+            android:exported="false" />
+        <activity
             android:name=".SuperheroApp.SuperheroDetailActivity"
             android:exported="false" />
         <activity

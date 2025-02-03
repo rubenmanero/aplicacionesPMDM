@@ -56,4 +56,8 @@ dependencies {
 
     //Picasso
     implementation (libs.picasso)
+
+    //DataStore
+    implementation (libs.androidx.datastore.preferences)
+
 }
